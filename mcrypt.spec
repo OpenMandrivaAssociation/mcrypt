@@ -9,7 +9,6 @@ Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.
 Source1:	%{name}.bash-completion
 BuildRequires:	libmhash-devel >= 0.8.15
 BuildRequires:	libmcrypt-devel >= 2.5.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A replacement for the old unix crypt(1) command. Mcrypt uses the following
