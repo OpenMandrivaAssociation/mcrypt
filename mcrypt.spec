@@ -4,6 +4,7 @@ Version:	2.6.5
 Release:	%mkrel 1
 License:	GPL
 Group:		File tools
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://mcrypt.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.tar.gz
 Source1:	%{name}.bash-completion
