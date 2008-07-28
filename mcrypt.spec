@@ -1,7 +1,7 @@
 Summary:	Data encryption/decryption program
 Name:		mcrypt
 Version:	2.6.5
-Release:	%mkrel 1
+Release:	%mkrel 3
 License:	GPL
 Group:		File tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
