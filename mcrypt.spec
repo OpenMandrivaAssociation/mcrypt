@@ -1,15 +1,16 @@
 Summary:	Data encryption/decryption program
 Name:		mcrypt
-Version:	2.6.7
+Version:	2.6.8
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		File tools
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://mcrypt.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.tar.gz
 Source1:	%{name}.bash-completion
+Patch0:		mcrypt-2.6.8-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	libmhash-devel >= 0.8.15
 BuildRequires:	libmcrypt-devel >= 2.5.0
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A replacement for the old unix crypt(1) command. Mcrypt uses the following
@@ -21,6 +22,7 @@ command. CBC, ECB, OFB and CFB modes of encryption are supported.
 %prep
 
 %setup -q
+%patch0 -p0 -b .format_not_a_string_literal_and_no_format_arguments
 
 cp %{SOURCE1} %{name}.bash-completion
 
