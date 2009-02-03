@@ -1,12 +1,11 @@
 Summary:	Data encryption/decryption program
 Name:		mcrypt
 Version:	2.6.8
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		File tools
 URL:		http://mcrypt.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.tar.gz
-Source1:	%{name}.bash-completion
 Patch0:		mcrypt-2.6.8-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	libmhash-devel >= 0.8.15
 BuildRequires:	libmcrypt-devel >= 2.5.0
@@ -23,8 +22,6 @@ command. CBC, ECB, OFB and CFB modes of encryption are supported.
 
 %setup -q
 %patch0 -p0 -b .format_not_a_string_literal_and_no_format_arguments
-
-cp %{SOURCE1} %{name}.bash-completion
 
 %build
 
@@ -43,16 +40,12 @@ rm -rf %{buildroot}
 
 %find_lang %name
 
-install -d %{buildroot}%{_sysconfdir}/bash_completion.d
-install -m0644 %{name}.bash-completion %{buildroot}%{_sysconfdir}/bash_completion.d/%{name}
-
 %clean
 rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-,root,root)
 %doc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS TODO doc/FORMAT doc/magic doc/sample*
-%config(noreplace) %{_sysconfdir}/bash_completion.d/%{name}
 %{_bindir}/*
 %{_mandir}/man1/*
 
