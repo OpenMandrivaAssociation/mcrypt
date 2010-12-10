@@ -1,7 +1,7 @@
 Summary:	Data encryption/decryption program
 Name:		mcrypt
 Version:	2.6.8
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		File tools
 URL:		http://mcrypt.sourceforge.net/
