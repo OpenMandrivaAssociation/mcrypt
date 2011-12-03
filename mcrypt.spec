@@ -1,7 +1,7 @@
 Summary:	Data encryption/decryption program
 Name:		mcrypt
 Version:	2.6.8
-Release:	%mkrel 3
+Release:	4
 License:	GPLv2+
 Group:		File tools
 URL:		http://mcrypt.sourceforge.net/
@@ -9,7 +9,6 @@ Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.
 Patch0:		mcrypt-2.6.8-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	libmhash-devel >= 0.8.15
 BuildRequires:	libmcrypt-devel >= 2.5.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A replacement for the old unix crypt(1) command. Mcrypt uses the following
@@ -40,13 +39,7 @@ rm -rf %{buildroot}
 
 %find_lang %name
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %name.lang
-%defattr(-,root,root)
 %doc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS TODO doc/FORMAT doc/magic doc/sample*
 %{_bindir}/*
 %{_mandir}/man1/*
-
-
