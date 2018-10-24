@@ -7,8 +7,8 @@ Group:		File tools
 URL:		http://mcrypt.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.tar.gz
 Patch0:		mcrypt-2.6.8-format_not_a_string_literal_and_no_format_arguments.diff
-BuildRequires:	libmhash-devel >= 0.8.15
-BuildRequires:	libmcrypt-devel >= 2.5.0
+BuildRequires:	mhash-devel >= 0.8.15
+BuildRequires:	mcrypt-devel >= 2.5.0
 
 %description
 A replacement for the old unix crypt(1) command. Mcrypt uses the following
