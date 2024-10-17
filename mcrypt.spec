@@ -4,7 +4,7 @@ Version:	2.6.8
 Release:	7
 License:	GPLv2+
 Group:		File tools
-URL:		http://mcrypt.sourceforge.net/
+URL:		https://mcrypt.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.tar.gz
 Patch0:		mcrypt-2.6.8-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	mhash-devel >= 0.8.15
