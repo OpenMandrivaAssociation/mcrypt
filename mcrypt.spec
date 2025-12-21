@@ -7,6 +7,11 @@ Group:		File tools
 URL:		https://mcrypt.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/mcrypt/%{name}-%{version}.tar.gz
 Patch0:		mcrypt-2.6.8-format_not_a_string_literal_and_no_format_arguments.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	mhash-devel >= 0.8.15
 BuildRequires:	libmcrypt-devel >= 2.5.0
 
